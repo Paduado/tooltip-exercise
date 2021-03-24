@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styles.css";
-import Tooltip from "./Tooltip/initialTooltip";
+import Tooltip from "./Tooltip/Tooltip";
 import Button from "./Button";
 
 export default function App() {
