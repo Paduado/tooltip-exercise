@@ -4,13 +4,12 @@ import Tooltip from "./Tooltip/Tooltip";
 import Button from "./Button";
 
 export default function App() {
-  const [x, setX] = useState(0);
-  const [y, setY] = useState(0);
-  const [show, setShow] = useState(false);
-
+  const [x, setX] = useState(100);
+  const [y, setY] = useState(100);
+  const [show, setShow] = useState(true);
   return (
     <div className="App">
-      <Tooltip x={x} y={y} show={show}>
+      <Tooltip x={x} y={y} show={true}>
         Some message
       </Tooltip>
       <Button>Some button</Button>
