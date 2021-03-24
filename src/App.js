@@ -1,22 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
-import { Tooltip } from "./Tooltip/Tooltip";
+import Tooltip from "./Tooltip/initialTooltip";
 import Button from "./Button";
 
-function ButtonWrapper(props) {
-  return <Button {...props}>Component injection</Button>;
-}
-
 export default function App() {
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+  const [show, setShow] = useState(false);
+
   return (
     <div className="App">
-      <Tooltip message="Component injection" component={ButtonWrapper} />
-      <Tooltip message="Clone element">
-        <Button>Clone element</Button>
+      <Tooltip x={x} y={y} show={show}>
+        Some message
       </Tooltip>
-      <Tooltip message="Render prop">
-        {(p) => <Button {...p}>Render prop</Button>}
-      </Tooltip>
+      <Button>Some button</Button>
     </div>
   );
 }
