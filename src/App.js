@@ -9,7 +9,7 @@ export default function App() {
   const [show, setShow] = useState(true);
   return (
     <div className="App">
-      <Tooltip x={x} y={y} show={true}>
+      <Tooltip x={x} y={y} show={show}>
         Some message
       </Tooltip>
       <Button>Some button</Button>
